@@ -1,5 +1,8 @@
 package ru.mts;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Main {
     public static void main(String[] args) {
         calculateTotalCost(new Purchase(3, 10, 0.75));
@@ -8,8 +11,8 @@ public class Main {
     }
 
     public static void calculateTotalCost(Purchase purchase){
-        String totalCostWithoutDiscount = String.format("%.2f", purchase.getCount() * purchase.getPrice());
-        String totalCostWithDiscount = String.format("%.2f", purchase.getCount()* purchase.getPrice() * (100 - purchase.getDiscount()) / 100);
+        BigDecimal totalCostWithoutDiscount = BigDecimal.valueOf(purchase.getPrice()).multiply(BigDecimal.valueOf(purchase.getCount())).setScale(2, RoundingMode.HALF_UP);
+        BigDecimal totalCostWithDiscount = totalCostWithoutDiscount.multiply(BigDecimal.valueOf((100 - purchase.getDiscount()) / 100)).setScale(2, RoundingMode.HALF_UP);
         System.out.println(purchase);
         System.out.println("Общая стоимость без учёта скидки: " + totalCostWithoutDiscount);
         System.out.println("Общая стоимость c учетом скидки: " + totalCostWithDiscount);
