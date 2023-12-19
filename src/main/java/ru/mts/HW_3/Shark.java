@@ -8,4 +8,11 @@ public class Shark extends Predator{
         this.cost = cost;
         this.breed = "Some shark breed";
     }
+
+    Shark(String name, BigDecimal cost, String breed, String character){
+        this.name = name;
+        this.cost = cost;
+        this.breed = breed;
+        this.character = character;
+    }
 }

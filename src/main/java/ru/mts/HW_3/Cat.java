@@ -8,4 +8,12 @@ public class Cat extends Pet{
         this.cost = cost;
         this.breed = "Some cat breed";
     }
+
+    Cat(String name, BigDecimal cost, String breed, String character){
+        this.name = name;
+        this.cost = cost;
+        this.breed = breed;
+        this.character = character;
+    }
+
 }

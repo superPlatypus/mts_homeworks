@@ -30,7 +30,7 @@ public abstract class AbstractAnimal implements Animal{
 
     @Override
     public String toString() {
-        return "AbstractAnimal{" +
+        return  this.getClass().getSimpleName()+ "{" +
                 "breed='" + getBreed() + '\'' +
                 ", name='" + getName() + '\'' +
                 ", cost=" + getCost() +

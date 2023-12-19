@@ -8,4 +8,11 @@ public class Wolf extends Predator{
         this.cost = cost;
         this.breed = "Some wolf breed";
     }
+
+    Wolf(String name, BigDecimal cost, String breed, String character){
+        this.name = name;
+        this.cost = cost;
+        this.breed = breed;
+        this.character = character;
+    }
 }
