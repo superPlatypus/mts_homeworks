@@ -1,6 +1,8 @@
 package ru.mts.HW_4;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * интерфейс для возвращения информации о животном
@@ -29,4 +31,6 @@ public interface Animal {
      * @return харакет животного
      */
     String getCharacter();
+
+    LocalDate getBirthDay();
 }

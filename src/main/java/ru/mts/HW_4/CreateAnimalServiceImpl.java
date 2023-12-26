@@ -1,18 +1,19 @@
 package ru.mts.HW_4;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class CreateAnimalServiceImpl implements CreateAnimalService {
-    public void createTenAnimals(){
+    public List<Animal> createAnimals(int n){
+        List<Animal> animals = new ArrayList<>();
         int i = 0;
-        do {
-            createAnimal();
+        Random random = new Random();
+        while (i < n){
+            AnimalType animalType = animalTypes.get(random.nextInt(4));
+            animals.add(animalFactory.createAnimal(animalType));
             i++;
-        } while (i < 10);
-    }
-
-    public void createTenAnimals(int n){
-        for (int i = 0; i  < n; i++){
-            createAnimalWithBreedAndCharacter();
         }
+        return animals;
     }
-
 }
