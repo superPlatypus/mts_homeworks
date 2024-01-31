@@ -1,8 +1,7 @@
-package ru.mts.HW_4;
+package ru.mts.HW_5;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class Dog extends Pet {
     public Dog(String name, BigDecimal cost, String breed, LocalDate birthDay){
