@@ -5,14 +5,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Shark extends Predator {
-    Shark(String name, BigDecimal cost, String breed, LocalDate birthDay){
+    public Shark(String name, BigDecimal cost, String breed, LocalDate birthDay){
         this.name = name;
         this.cost = cost;
         this.breed = breed;
         this.birthDay = birthDay;
     }
 
-    Shark(String name, BigDecimal cost, String breed, String character, LocalDate birthday){
+    public Shark(String name, BigDecimal cost, String breed, String character, LocalDate birthday){
         this.name = name;
         this.cost = cost;
         this.breed = breed;
